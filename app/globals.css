@@ -1,18 +1,35 @@
 /* Caminho: app/globals.css */
-@import "tailwindcss";
 
 :root {
-  --color-primary: #012E40;
-  --color-secondary: #03738C;
-  --color-accent: #00BC99;
-  --color-white: #FFFFFF;
-  --color-black: #000000;
+  /* Suas cores originais */
+  --brand-primary: #012E40;     /* Azul escuro (para textos e painel) */
+  --brand-secondary: #03738C;  /* Azul médio (para links secundários) */
+  --brand-accent: #00BC99;    /* Verde claro (para botões e links principais) */
+  --brand-white: #FFFFFF;
+  --brand-black: #000000;
+
+  /* Mapeamento para os nomes semânticos do layout */
+  --page-bg: #f8f9fa;                          /* Fundo da página (cinza muito claro) */
+  --form-bg: var(--brand-white);                /* Fundo do formulário (branco) */
+  --panel-bg: var(--brand-primary);             /* Fundo do painel de boas-vindas */
+  
+  --color-primary: var(--brand-accent);         /* Cor de ação principal (botões, links) */
+  --color-secondary: var(--brand-secondary);    /* Cor de ação secundária */
+  
+  --text-light: var(--brand-white);             /* Texto para fundos escuros */
+  --text-dark: var(--brand-primary);              /* Texto para fundos claros */
+  --text-muted: #6b7280;                       /* Texto cinza para placeholders e parágrafos */
+
+  --input-bg: #f3f4f6;                          /* Fundo dos campos de input */
   --font-family: 'Encode Sans', sans-serif;
 }
 
+@import "tailwindcss";
+
 body {
   font-family: var(--font-family);
-  background-color: #f8f9fa;
+  background-color: var(--page-bg);
+  color: var(--text-dark);
   min-height: 100vh;
   margin: 0;
   padding: 0;
