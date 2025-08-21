@@ -32,13 +32,11 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
-        {/* Logo - Agora é um filho direto do container */}
         <Link href="/" className={styles.logo}>
           <div className={styles.logoIcon}>F</div>
           <span>Facillit</span>
         </Link>
 
-        {/* Navegação Desktop - Agora é um filho direto do container */}
         <nav className={`${styles.nav} ${styles.desktopNav}`} role="navigation">
           {NAVIGATION_LINKS.map((item) => (
             <div key={item.label} className={styles.navItem}>
@@ -74,9 +72,9 @@ const Header = () => {
           ))}
         </nav>
         
-        {/* Botão CTA e Menu Mobile Toggle */}
         <div className={styles.rightSection}>
-            <Link href="/comecar" className={`${styles.ctaButton} ${styles.desktopCta}`}>
+            {/* <<< MUDANÇA AQUI >>> */}
+            <Link href="/login" className={`${styles.ctaButton} ${styles.desktopCta}`}>
                 Começar Agora
             </Link>
             <div 
@@ -92,7 +90,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Navegação Mobile (sem alterações) */}
       <nav className={`${styles.mobileNav} ${isMobileMenuOpen ? styles.active : ''}`}>
         <div className={styles.mobileNavContent}>
             {NAVIGATION_LINKS.map(item => (
@@ -119,8 +116,9 @@ const Header = () => {
                     )}
                 </div>
             ))}
+            {/* <<< E MUDANÇA AQUI >>> */}
              <div className={`${styles.mobileNavItem} ${styles.mobileCta}`}>
-                <Link href="/comecar" className={`${styles.ctaButton} ${styles.mobileCtaButton}`} onClick={closeMobileMenu}>
+                <Link href="/login" className={`${styles.ctaButton} ${styles.mobileCtaButton}`} onClick={closeMobileMenu}>
                     Começar Agora
                 </Link>
             </div>

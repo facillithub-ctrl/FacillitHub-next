@@ -1,7 +1,6 @@
-/* A nova diretiva @import substitui as três antigas @tailwind */
+
 @import "tailwindcss";
 
-/* O resto do arquivo permanece igual */
 :root {
   --color-primary: #012E40;
   --color-secondary: #03738C;

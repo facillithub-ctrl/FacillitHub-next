@@ -1,3 +1,4 @@
+// Caminho: tailwind.config.ts
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -9,9 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'primary': '#012E40',   // Azul escuro
-        'secondary': '#03738C', // Azul médio
-        'accent': '#00BC99',    // Verde-água
+        'primary': '#012E40',
+        'secondary': '#03738C',
+        'accent': '#00BC99',
         'light': '#FFFFFF',
         'dark': '#000000',
       },
