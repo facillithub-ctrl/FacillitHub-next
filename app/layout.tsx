@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Encode_Sans } from "next/font/google";
-import "./globals.css";
+import "./globals.css"; // A importação de CSS deve vir primeiro
 
 const encodeSans = Encode_Sans({ 
   subsets: ["latin"],
@@ -20,7 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={encodeSans.className}>
+      {/* A classe da fonte deve estar no <html>, e o body deve ser simples */}
+      <body className={encodeSans.className}> 
         {children}
       </body>
     </html>

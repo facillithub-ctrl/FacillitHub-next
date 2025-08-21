@@ -1,4 +1,3 @@
-// Caminho: tailwind.config.ts
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -10,11 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'primary': '#012E40',
-        'secondary': '#03738C',
-        'accent': '#00BC99',
-        'light': '#FFFFFF',
-        'dark': '#000000',
+        // CORREÇÃO: Apontamos para as variáveis CSS do seu globals.css
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
+        accent: 'var(--color-accent)',
+        light: 'var(--color-white)',
+        dark: 'var(--color-black)',
       },
     },
   },

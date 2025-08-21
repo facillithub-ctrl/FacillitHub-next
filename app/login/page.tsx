@@ -1,4 +1,3 @@
-// Caminho: app/login/page.tsx
 'use client';
 
 import React, { useState } from 'react';
@@ -40,9 +39,10 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-light flex items-center justify-center p-4">
-      <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 bg-light rounded-2xl shadow-2xl overflow-hidden">
+    <div className="min-h-screen w-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center p-4">
+      <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 bg-white rounded-2xl shadow-2xl overflow-hidden">
         
+        {/* Coluna Esquerda: Formulário de Login */}
         <div className="p-8 md:p-12">
           <h2 className="text-2xl font-bold text-primary mb-1">Entrar na sua conta</h2>
           <p className="text-gray-600 mb-8">Bem-vindo de volta!</p>
@@ -83,7 +83,8 @@ export default function LoginPage() {
           </div>
         </div>
 
-        <div className="hidden lg:flex flex-col items-center justify-center p-12 bg-gradient-to-br from-primary to-secondary text-white text-center rounded-l-2xl">
+        {/* Coluna Direita: Boas-vindas */}
+        <div className="hidden lg:flex flex-col items-center justify-center p-12 bg-gradient-to-br from-primary to-secondary text-white text-center">
             <h1 className="text-4xl font-bold mb-4">Sou novo aqui!</h1>
             <p className="mb-8 max-w-sm">Crie sua conta para começar a organizar, aprender e evoluir. Junte-se à comunidade Facillit e transforme sua jornada.</p>
             <div className="w-full flex flex-col gap-4">
@@ -98,15 +99,6 @@ export default function LoginPage() {
                     </button>
                 </Link>
             </div>
-            <div className="mt-8 text-center w-full">
-                <p className="text-white/70 text-sm mb-4">Ou crie sua conta com</p>
-                <div className="flex justify-center gap-4">
-                  <button className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-colors"><GoogleIcon className="h-6 w-6" /></button>
-                  <button className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-colors"><Facebook size={24} className="text-white" /></button>
-                  <button className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-colors"><Twitter size={24} className="text-white" /></button>
-                  <button className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-colors"><Linkedin size={24} className="text-white" /></button>
-                </div>
-              </div>
         </div>
 
       </div>

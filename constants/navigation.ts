@@ -1,13 +1,9 @@
-// Arquivo: constants/navigation.ts
-
-// --- TIPAGEM DA ESTRUTURA ---
-// Define o formato de um link simples
+// Caminho: constants/navigation.ts
 export interface NavLink {
   label: string;
   href: string;
 }
 
-// Define o formato de uma seção dentro de um Mega Dropdown
 export interface MegaSection {
   title: string;
   links: NavLink[];
@@ -17,26 +13,20 @@ export interface MegaSection {
   };
 }
 
-// Define o formato de um item principal no menu de navegação
 export interface NavItem {
   label: string;
-  href?: string; // Opcional, usado para links diretos
-  dropdownContent?: { // Opcional, usado para menus suspensos
+  href?: string;
+  dropdownContent?: {
     columns: 'two-columns' | 'three-columns';
     sections: MegaSection[];
   };
 }
 
-// --- DADOS DA NAVEGAÇÃO ---
-// Este é o array que alimenta o componente Header
 export const NAVIGATION_LINKS: NavItem[] = [
-  // Item 1: Início (Link direto)
   { 
     label: 'Início', 
     href: '/' 
   },
-
-  // Item 2: Diferenciais (Mega Dropdown)
   {
     label: 'Diferenciais',
     dropdownContent: {
@@ -63,8 +53,6 @@ export const NAVIGATION_LINKS: NavItem[] = [
       ],
     },
   },
-
-  // Item 3: Módulos (Mega Dropdown)
   {
     label: 'Módulos',
     dropdownContent: {
@@ -106,8 +94,6 @@ export const NAVIGATION_LINKS: NavItem[] = [
       ],
     },
   },
-
-  // Item 4: Para quem? (Mega Dropdown)
   {
     label: 'Para quem?',
     dropdownContent: {
@@ -119,8 +105,6 @@ export const NAVIGATION_LINKS: NavItem[] = [
       ],
     },
   },
-
-  // Item 5: Preços (Mega Dropdown)
   {
     label: 'Preços',
     dropdownContent: {
@@ -135,8 +119,6 @@ export const NAVIGATION_LINKS: NavItem[] = [
       ],
     },
   },
-
-  // Item 6: Sobre (Mega Dropdown)
   {
     label: 'Sobre',
     dropdownContent: {
@@ -148,8 +130,6 @@ export const NAVIGATION_LINKS: NavItem[] = [
       ],
     },
   },
-
-  // Item 7: Recursos (Mega Dropdown)
   {
     label: 'Recursos',
     dropdownContent: {
